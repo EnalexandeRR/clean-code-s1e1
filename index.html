@@ -6,52 +6,56 @@
   <link rel="stylesheet" href="style.css" media="screen" charset="utf-8">
 </head>
 <body class="body">
-  <div class="header">
+  <header class="header">
     <img class="header__image" src="./eisenhower-matrix.jpg">
     <a class="header__info-link" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
-  </div>
-  <div class="main">
-    <p>
-    <label class="section-header">Add Item</label>
-    <div class="add-task__row-wrapper">
-      <input class="add-task__name-input" id="add-task__name-input" type="text">
-      <button class="add-task__add-button">Add</button>
-    </div>
-    </p>
+  </header>
+  <main class="main">
+    <section class="section-add">
+      <h3 class="section-header">Add Item</h3>
+      <div class="add-task__row-wrapper">
+        <input class="add-task__name-input" id="add-task__name-input" type="text">
+        <button class="add-task__add-button">Add</button>
+      </div>
+    </section>
+    <section class="section-todo">
     <h3 class="section-header">Todo</h3>
-    <ul class="tasks-list tasks-incompleted">
-      <li class="task-item">
-        <input class="task-item__done-checker" type="checkbox">
-        <label class="task-item__label">Pay Bills</label>
-        <input class="task-item__name-input" type="text">
-        <button class="task-item__edit-button">Edit</button>
-        <button class="task-item__delete-button">
-          <img class="task-item__delete-image" src="./remove.svg">
-        </button>
-      </li>
-      <li class="task-item edit-mode">
-        <input class="task-item__done-checker" type="checkbox">
-        <label class="task-item__label">Go Shopping</label>
-        <input class="task-item__name-input" type="text" value="Go Shopping">
-        <button class="task-item__save-button">Save</button>
-        <button class="task-item__delete-button">
-          <img class="task-item__delete-image" src="./remove.svg">
-        </button>
-      </li>
-    </ul>
-    <h3 class="section-header">Completed</h3>
-    <ul class="tasks-list tasks-completed">
-      <li class="task-item">
-        <input class="task-item__done-checker" stype="checkbox" checked>
-        <label class="task-item__label">See the Doctor</label>
-        <input class="task-item__name-input" type="text">
-        <button class="task-item__edit-button">Edit</button>
-        <button class="task-item__delete-button">
-          <img class="task-item__delete-image" src="./remove.svg">
-        </button>
-      </li>
-    </ul>
-  </div>
+      <ul class="tasks-list tasks-incompleted">
+        <li class="task-item">
+          <input class="task-item__done-checker" type="checkbox">
+          <label class="task-item__label">Pay Bills</label>
+          <input class="task-item__name-input" type="text">
+          <button class="task-item__edit-button">Edit</button>
+          <button class="task-item__delete-button">
+            <img class="task-item__delete-image" src="./remove.svg">
+          </button>
+        </li>
+        <li class="task-item edit-mode">
+          <input class="task-item__done-checker" type="checkbox">
+          <label class="task-item__label">Go Shopping</label>
+          <input class="task-item__name-input" type="text" value="Go Shopping">
+          <button class="task-item__save-button">Save</button>
+          <button class="task-item__delete-button">
+            <img class="task-item__delete-image" src="./remove.svg">
+          </button>
+        </li>
+      </ul>
+    </section>
+    <section class="section-done">
+      <h3 class="section-header">Completed</h3>
+      <ul class="tasks-list tasks-completed">
+        <li class="task-item">
+          <input class="task-item__done-checker" stype="checkbox" checked>
+          <label class="task-item__label">See the Doctor</label>
+          <input class="task-item__name-input" type="text">
+          <button class="task-item__edit-button">Edit</button>
+          <button class="task-item__delete-button">
+            <img class="task-item__delete-image" src="./remove.svg">
+          </button>
+        </li>
+      </ul>
+    </section>
+  </main>
   <script src="app.js"></script>
 </body>
 </html>
