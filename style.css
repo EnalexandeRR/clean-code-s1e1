@@ -130,6 +130,7 @@
   width: 226px;
 }
 .task-item__name-input {
+  display: none;
   width: 226px;
 }
 .task-item__delete-image {
