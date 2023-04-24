@@ -8,7 +8,7 @@
 
 // Event handling, user interaction is what starts the code execution.
 
-var taskInput=document.getElementById("task-item__name-input");//Add a new task.
+var taskInput=document.getElementById("add-task__name-input");//Add a new task.
 var addButton=document.querySelector(".add-task__add-button");//first button
 var incompleteTaskHolder=document.querySelector(".tasks-incompleted");//ul of #incompleteTasks
 var completedTasksHolder=document.querySelector(".tasks-completed");//completed-tasks
@@ -32,11 +32,15 @@ var createNewTaskElement=function(taskString){
     var deleteButton=document.createElement("button");//delete button
     var deleteButtonImg=document.createElement("img");//delete button image
 
+
+
     label.innerText=taskString;
     label.className="task-item__label";
 
     //Each elements, needs appending
+    listItem.className = "task-item";
     checkBox.type="checkbox";
+    checkBox.className = "task-item__done-checker";
     editInput.type="text";
     editInput.className="task-item__name-input";
 
@@ -45,6 +49,7 @@ var createNewTaskElement=function(taskString){
 
     deleteButton.className="task-item__delete-button";
     deleteButtonImg.src='./remove.svg';
+    deleteButtonImg.className = "task-item__delete-image";
     deleteButton.appendChild(deleteButtonImg);
 
 
@@ -155,6 +160,7 @@ addButton.addEventListener("click",ajaxRequest);
 var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
     console.log("bind list item events");
 //select ListItems children
+console.log(taskListItem);
     var checkBox=taskListItem.querySelector(".task-item__done-checker");
     var editButton=taskListItem.querySelector(".task-item__edit-button");
     var deleteButton=taskListItem.querySelector(".task-item__delete-button");
